@@ -2,46 +2,51 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/styles.css">
+
   <title>Formulário interativo de cartão de crétido</title>
 
   <style></style>
 </head>
 <body>
-<header>
-
-</header>
-<main>
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-</main>
+  <header></header>
+  <main>
+    <section class="cartao-frente">
+      <img src="images/bg-card-front.png" alt="Parte da frente do cartão" id="cartao-frente">
+      <div>
+        0000 0000 0000 0000
+        Jane Appleseed
+        00/00
+      </div>
+    </section>
+    <section class="cartao-verso">
+      <img src="images/bg-card-back.png" alt="Parte de trás do cartão" id="cartao-verso">
+      <div>
+        000
+      </div>
+    </section>
+    <section class="preenchimento">
+      <label for="nome-do-cartao">Nome do cartão</label>
+      <input type="text" name="ex.: LEONARDO D CERETTA" id="nome-cartao">
+      <label for="numero-do-cartao">Número do cartão</label>
+      <input type="number" name="ex.: 1234 5678 9123 0000" id="numero-cartao">
+      <label for="data-do-cartao">Data de vencimento (MM/YY)</label>
+      <input type="text" name="MM" id="mes">
+      <input type="text" name="YY" id="ano">
+      <label for="codigo-de-seguranca">CVC</label>
+      <input type="number" name="ex.: 123" id="cvc">
+    </section>
+    <button class="botao-confirmar" type="button">Confirmar</button>
+    <!-- Mensagem de que está tudo certo -->
+    <form>
+      Thank you!
+      We've added your card details
+    </form>
+    <button class="botao-continuar" type="button">Continuar</button>
+  </main>
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
