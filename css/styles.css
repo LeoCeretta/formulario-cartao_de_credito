@@ -1,6 +1,98 @@
 body {
     background: url(../images/bg-main-desktop.png);
     background-repeat: no-repeat;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cartoes {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 800px;
+}
+
+#cartao-frente {
+    display: flex;
+    width: 40%;
+    margin-top: 12%;
+    margin-left: 15%;
+}
+
+#cartao-verso {
+    display: flex;
+    width: 40%;
+    margin-top: 0%;
+    margin-left: 25%;
+}
+
+#icone-cartao {
+    position: relative;
+    top: -190px;
+    left: 170px;
+}
+
+#numero-no-cartao {
+    position: relative;
+    top: -110px;
+    left: 95px;
+    font-size: 26px;
+    color: whitesmoke;
+}
+
+#nome-no-cartao {
+    position: relative;
+    top: -65px;
+    left: -195px;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+#data-no-cartao {
+    position: relative;
+    top: -65px;
+    left: -160px;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+#cvc-no-cartao {
+    position: relative;
+    top: -120px;
+    left: 540px;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.preenche {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.alerta-concluido {
+    display: none;
+}
+
+.campo {
+    margin: 0;
+	padding-bottom: 1em;
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: .7em;
+	width: 100%;
 }
 
 .attribution { font-size: 11px; text-align: center; }
