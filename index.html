@@ -15,36 +15,42 @@
 <body>
   <main>
     <section class="cartoes">
-      <form class="cartao-frente">
+      <div class="pai-cartao-frente">
         <img src="images/bg-card-front.png" alt="Parte da frente do cartão" id="cartao-frente">
-        <svg id="icone-cartao" width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
-        <label id="numero-no-cartao">0000 0000 0000 0000</label>
-        <label id="nome-no-cartao">Leonardo D Ceretta</label>
-        <label id="data-no-cartao">00/00</label>
-      </form>
-      <form class="cartao-verso">
+        <div class="filho-cartao-frente">
+          <svg id="icone-cartao" width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+          <span id="numero-no-cartao">0000 0000 0000 0000</span>
+          <span id="nome-no-cartao">Leonardo D Ceretta</span>
+          <span id="data-no-cartao">00/00</span>
+        </div>
+      </div>
+      <div class="pai-cartao-verso">
         <img src="images/bg-card-back.png" alt="Parte de trás do cartão" id="cartao-verso">
-        <label id="cvc-no-cartao">000</label>
-      </form>
+        <div class="filho-cartao-verso">
+          <span id="cvc-no-cartao">000</span>
+        </div>
+      </div>
     </section>
     <section class="preenchimento">
       <form class="formulario">
         <div class="preenche">
           <label for="nome-do-cartao">Nome do cartão</label>
-          <input type="text" name="nome cartao" placeholder="ex.: JOAOZINHO DA SILVA" class="campo" id="nome-cartao">
+          <input type="text" name="nome cartao" placeholder="ex.: JOAO DA SILVA" class="campo" id="nome-cartao">
         </div>
         <div class="preenche">
           <label for="numero-do-cartao">Número do cartão</label>
           <input type="text" name="numero cartao" placeholder="ex.: 1234 5678 9123 0000" class="campo" id="numero-cartao">
         </div>
-        <div class="preenche">
-          <label for="data-do-cartao">Data de vencimento (MM/YY)</label>
-          <input type="text" name="mes" placeholder="MM" class="campo-data" id="mes">
-          <input type="text" name="ano" placeholder="YY" class="campo-data" id="ano">
-        </div>
-        <div class="preenche">
-          <label for="codigo-de-seguranca">CVC</label>
-          <input type="text" name="cvc" placeholder="ex.: 123" class="campo" id="cvc">
+        <div class="preenche-data-cvc">
+          <div>
+            <label for="data-do-cartao">Data de vencimento (MM/YY)</label>
+            <input type="text" name="mes" placeholder="MM" class="campo-data" id="mes">
+            <input type="text" name="ano" placeholder="YY" class="campo-data" id="ano">
+          </div>
+          <div>
+            <label for="codigo-de-seguranca">CVC</label>
+            <input type="text" name="cvc" placeholder="ex.: 123" class="campo" id="cvc">
+          </div>
         </div>
         <button class="botao-confirmar" type="button">Confirmar</button>
       </form>        
