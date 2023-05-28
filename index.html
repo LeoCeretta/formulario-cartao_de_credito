@@ -35,21 +35,21 @@
       <form class="formulario">
         <div class="preenche">
           <label for="nome-do-cartao">Nome do cartão</label>
-          <input type="text" name="nome cartao" placeholder="ex.: JOAO DA SILVA" class="campo" id="nome-cartao">
+          <input type="text" name="nome cartao" placeholder="ex.: JOAO DA SILVA" class="campo" id="nome-cartao" required>
         </div>
         <div class="preenche">
           <label for="numero-do-cartao">Número do cartão</label>
-          <input type="text" name="numero cartao" placeholder="ex.: 1234 5678 9123 0000" class="campo" id="numero-cartao">
+          <input type="number" name="numero cartao" minlength="16" maxlength="16" placeholder="ex.: 1234 5678 9123 0000" class="campo" id="numero-cartao" required>
         </div>
         <div class="preenche-data-cvc">
           <div>
             <label for="data-do-cartao">Data de vencimento (MM/YY)</label>
-            <input type="text" name="mes" placeholder="MM" class="campo-data" id="mes">
-            <input type="text" name="ano" placeholder="YY" class="campo-data" id="ano">
+            <input type="text" name="mes" placeholder="MM" class="campo-data" id="mes" required>
+            <input type="text" name="ano" placeholder="YY" class="campo-data" id="ano" required>
           </div>
           <div>
             <label for="codigo-de-seguranca">CVC</label>
-            <input type="text" name="cvc" placeholder="ex.: 123" class="campo" id="cvc">
+            <input type="text" name="cvc" placeholder="ex.: 123" class="campo" id="cvc" required>
           </div>
         </div>
         <button class="botao-confirmar" type="button">Confirmar</button>
