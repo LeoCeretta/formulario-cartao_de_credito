@@ -15,7 +15,7 @@ main {
 .cartoes {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 60%;
     height: 700px;
 }
 
@@ -89,7 +89,11 @@ main {
     justify-content: space-around;
     align-items: flex-start;
     width: 38%;
-    margin-right: 10%;
+    margin-right: 12%;
+}
+
+.formulario {
+    width: 350px;
 }
 
 .preenche {
@@ -99,9 +103,19 @@ main {
     font-weight: bolder;
 }
 
+.preenche-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bolder;
+}
+
 .preenche-data-cvc {
     display: flex;
     font-weight: bolder;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .preenche-data {
@@ -109,35 +123,51 @@ main {
     flex-direction: row;
 }
 
+.mes-ano {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+}
+
+.cvc {
+    width: 50px;
+}
+
 .preenche-cvc {
     display: flex;
     flex-direction: row;
 }
 
-.alerta-concluido {
-    display: none;
+.mensagem-final {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .campo {
     margin: 15px;
-	padding-bottom: 1em;
 	width: 100%;
 	border: 1px solid #ccc;
 	padding: 1em;
+    font-family: 'Space Grotesk';
+    border-radius: 20px;
 }
 
 .campo-data {
     margin: 15px;
-	padding-bottom: 1em;
 	border: 1px solid #ccc;
 	padding: 1em;
-    flex-direction: row;
+    width: 50px;
+    font-family: 'Space Grotesk';
+    border-radius: 15px;
 }
 
-.botao-confirmar {
+.botao {
     color: hsl(224, 60%, 92%);
     background-color: hsl(228, 45%, 44%);
-    padding: 1rem 0rem;
+    padding: 1rem 10rem;
     text-align: center;
     display: inline-block;
     outline: none;
@@ -146,6 +176,10 @@ main {
     text-decoration: none;
     border: none;
     cursor: pointer;
+    margin-top: 7px;
+    font-family: 'Space Grotesk';
+    font-size: inherit;
+    border-radius: 40px;
 }
 
 .attribution { font-size: 11px; text-align: center; }

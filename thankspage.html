@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/styles.css">  
+
+    <title>Formulário interativo de cartão de crétido</title>
+</head>
+<body>
+    <main>
+        <section class="cartoes">
+            <form id="formulario-final">
+              <div class="pai-cartao-frente">
+                <img src="images/bg-card-front.png" alt="Parte da frente do cartão" id="cartao-frente">
+                <div class="filho-cartao-frente">
+                  <svg id="icone-cartao" width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+                  <span id="numero-no-cartao"></span>
+                  <span id="nome-no-cartao"></span>
+                  <span id="data-no-cartao"></span>
+                </div>
+              </div>
+              <div class="pai-cartao-verso">
+                <img src="images/bg-card-back.png" alt="Parte de trás do cartão" id="cartao-verso">
+                <div class="filho-cartao-verso">
+                  <span id="cvc-no-cartao"></span>
+                </div>
+              </div>
+            </form>
+          </section>
+        <section class="concluido">
+            <div class="preenche-final">
+                <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+                <div class="mensagem-final">
+                    <label for="obrigado">Obrigado!</label>
+                    <label for="mensagem">Recebemos os detalhes do seu cartão!</label>
+                </div>
+                <input class="botao" type="button" value="Continuar">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Leonardo Dallepiane Ceretta</a>.
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,21 +1,40 @@
-const tiposDeErro = [
-    'valueMissing',
-    'typeMismatch',
-    'patternMismatch',
-    'customError'
-]
+const form = document.getElementById("formulario");
+const itens = JSON.parse(localStorage.getItem("itens")) || [];
 
-const validacao = {
-    nome: {
-        valueMissing: 'O campo de nome não pode estar vazio.'
-    },
-    numero: {
-        valueMissing: 'O campo de número do cartão não pode estar vazio.'
-    },
-    data: {
-        valueMissing: 'Os campos de mês e ano não podem estar vazio.'
-    },
-    cvc: {
-        valueMissing: 'O campo cvc não pode estar vazio.'
+form.addEventListener("submit", (evento)=> {
+    //evento.preventDefault();
+
+    const nome = evento.target.elements["nome"];
+    const numero = evento.target.elements["numero"];
+    const mes = evento.target.elements["mes"];
+    const ano = evento.target.elements["ano"];
+    const cvc = evento.target.elements["cvc"];
+
+    const itemAtual = {
+        "nome": nome.value,
+        "numero": numero.value,
+        "mes": mes.value,
+        "ano": ano.value,
+        "cvc": cvc.value
     }
+
+    itens.push(itemAtual);
+
+    localStorage.setItem("itens", JSON.stringify(itens));
+
+
+});
+
+function paginaFinal() {
+    window.location.href="thankspage.html"    
 }
+
+function preencheCartao(itemAtual) {
+    document.querySelector("[numero-no-cartao]").innerHTML = itemAtual.numero;
+    document.querySelector("[nome-no-cartao]").innerHTML = itemAtual.nome;
+    document.querySelector("[mes-no-cartao]").innerHTML = itemAtual.mes;
+    document.querySelector("[ano-no-cartao]").innerHTML = itemAtual.ano;
+    document.querySelector("[cvc-no-cartao]").innerHTML = itemAtual.cvc;
+}
+
+console.log(preencheCartao);
