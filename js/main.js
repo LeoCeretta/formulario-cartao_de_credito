@@ -2,7 +2,7 @@ const form = document.getElementById("formulario");
 const itens = JSON.parse(localStorage.getItem("itens")) || [];
 
 form.addEventListener("submit", (evento)=> {
-    //evento.preventDefault();
+    evento.preventDefault();
 
     const nome = evento.target.elements["nome"];
     const numero = evento.target.elements["numero"];
