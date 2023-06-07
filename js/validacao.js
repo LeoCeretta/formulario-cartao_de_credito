@@ -1,21 +1,28 @@
-const tiposDeErro = [
-    'valueMissing',
-    'typeMismatch',
-    'patternMismatch',
-    'customError'
-]
 
-const validacao = {
-    nome: {
-        valueMissing: 'O campo de nome não pode estar vazio.'
-    },
-    numero: {
-        valueMissing: 'O campo de número do cartão não pode estar vazio.'
-    },
-    data: {
-        valueMissing: 'Os campos de mês e ano não podem estar vazio.'
-    },
-    cvc: {
-        valueMissing: 'O campo cvc não pode estar vazio.'
+function checkInputs(inputs) {
+    var filled = true;
+
+    inputs.forEach(function(input) {
+        
+      if(input.value === "") {
+          filled = false;
+      } else {
+        filled = true;
+      }
+    
+    });
+    
+    return filled;
+    
+  }
+
+ function atualizaPagina(event) {
+    event.preventDefault();
+    if(filled === false) {
+        checkInputs();
+    } else {
+        return window.location.href="thankspage.html";
     }
+
 }
+

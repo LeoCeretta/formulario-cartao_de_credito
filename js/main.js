@@ -25,9 +25,6 @@ form.addEventListener("submit", (evento)=> {
 
 });
 
-function paginaFinal() {
-    window.location.href="thankspage.html"    
-}
 
 function preencheCartao(itemAtual) {
     document.querySelector("[numero-no-cartao]").innerHTML = itemAtual.numero;
